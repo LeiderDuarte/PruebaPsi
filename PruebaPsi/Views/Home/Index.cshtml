@@ -1,0 +1,30 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<appSettings>
+    <add key="EPPlus:ExcelPackage.LicenseContext" value="NonCommercial" />
+</appSettings>
+
+<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="6000">
+    <div class="container">
+        <div class="card">
+            <div class="card-body">
+                <form method="post" asp-controller="Home" asp-action="Import" enctype="multipart/form-data">
+                    <div class="form-control">
+                        <input type="file" name="file" />
+                    </div>
+                    <button type="submit">Import from Excel</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="col-form-label">
+        <p>
+            <a asp-controller="Usuarios" asp-action="Index">Listar y  Actualizar</a>
+        </p>
+    </div>
+</div>
+
+   
+
